@@ -29,19 +29,6 @@ function setLang(l){
   setTimeout(function(){loader.classList.add('done')},3000);
 })();
 
-// ---------- ヒーロー題字（一文字ずつ） ----------
-(function(){
-  var title=document.querySelector('.hero h1 .jp-t');
-  if(!title)return;
-  var text=title.textContent;title.textContent='';
-  Array.prototype.forEach.call(text,function(ch,i){
-    var s=document.createElement('span');
-    s.className='char';s.textContent=ch;
-    s.style.animationDelay=(1+i*0.14)+'s';
-    title.appendChild(s);
-  });
-})();
-
 // ---------- ナビ・進捗 ----------
 (function(){
   var nav=document.getElementById('nav');
